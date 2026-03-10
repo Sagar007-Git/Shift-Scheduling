@@ -1,0 +1,30 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false" applyBodyTag="false" applyHtmlTag="false">
+    <html>
+        <head>
+            <title>Workforce Scheduler</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        </head>
+        <body style="margin: 0; padding: 0; background-color: #F3F3F3;">
+            
+            <apex:includeLightning />
+
+            <div id="gantt-container"></div>
+
+            <script>
+                // Format: $Lightning.use("namespace:AppName", callback)
+                $Lightning.use("c:SchedulerOutApp", function() {
+                    
+                    $Lightning.createComponent(
+                        "c:schedulerGrid",     // Name of your LWC
+                        {},                    // Any @api properties you want to pass (empty here)
+                        "gantt-container",     // The ID of the div above
+                        function(cmp) {
+                            console.log("Scheduler Grid loaded successfully via Lightning Out!");
+                        }
+                    );
+
+                });
+            </script>
+        </body>
+    </html>
+</apex:page>
