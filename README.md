@@ -152,6 +152,10 @@ Fields:
 
 ### Admin Authentication
 
+```
+  Testing instance : https://orgfarm-6af4352e26-dev-ed.develop.my.salesforce-sites.com/?adminId=003fj00000dLIEqAAO
+```
+
 Access is controlled via secure URL parameters:
 
 ```
